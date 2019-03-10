@@ -1,0 +1,11 @@
+framework module BLEControlFramework {
+  umbrella header "BLEControlFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module BLEControlFramework.Swift {
+    header "BLEControlFramework-Swift.h"
+    requires objc
+}
