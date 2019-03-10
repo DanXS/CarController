@@ -15,6 +15,9 @@
 		9795176C222E78AA00916FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9795176A222E78AA00916FB2 /* LaunchScreen.storyboard */; };
 		97951777222E78AA00916FB2 /* CarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97951776222E78AA00916FB2 /* CarControllerTests.swift */; };
 		97951782222E78AA00916FB2 /* CarControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97951781222E78AA00916FB2 /* CarControllerUITests.swift */; };
+		9795179A222EA18200916FB2 /* BLEControlFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97951799222EA18200916FB2 /* BLEControlFramework.framework */; };
+		9795179B222EA18200916FB2 /* BLEControlFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97951799222EA18200916FB2 /* BLEControlFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		979517A02232B6E500916FB2 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795179F2232B6E500916FB2 /* CameraPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9795179C222EA18200916FB2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9795179B222EA18200916FB2 /* BLEControlFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9795175B222E78A800916FB2 /* CarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9795175E222E78A800916FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		9795177D222E78AA00916FB2 /* CarControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97951781222E78AA00916FB2 /* CarControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarControllerUITests.swift; sourceTree = "<group>"; };
 		97951783222E78AA00916FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97951799222EA18200916FB2 /* BLEControlFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BLEControlFramework.framework; path = Frameworks/BLEControlFramework.framework; sourceTree = "<group>"; };
+		9795179F2232B6E500916FB2 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9795179A222EA18200916FB2 /* BLEControlFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +99,7 @@
 		97951752222E78A700916FB2 = {
 			isa = PBXGroup;
 			children = (
+				97951799222EA18200916FB2 /* BLEControlFramework.framework */,
 				9795175D222E78A800916FB2 /* CarController */,
 				97951775222E78AA00916FB2 /* CarControllerTests */,
 				97951780222E78AA00916FB2 /* CarControllerUITests */,
@@ -101,6 +122,7 @@
 			children = (
 				9795175E222E78A800916FB2 /* AppDelegate.swift */,
 				97951760222E78A800916FB2 /* ViewController.swift */,
+				9795179F2232B6E500916FB2 /* CameraPreviewView.swift */,
 				97951762222E78A800916FB2 /* Main.storyboard */,
 				97951768222E78AA00916FB2 /* Assets.xcassets */,
 				9795176A222E78AA00916FB2 /* LaunchScreen.storyboard */,
@@ -138,6 +160,7 @@
 				97951757222E78A800916FB2 /* Sources */,
 				97951758222E78A800916FB2 /* Frameworks */,
 				97951759222E78A800916FB2 /* Resources */,
+				9795179C222EA18200916FB2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979517A02232B6E500916FB2 /* CameraPreviewView.swift in Sources */,
 				97951767222E78A800916FB2 /* CarController.xcdatamodeld in Sources */,
 				97951761222E78A800916FB2 /* ViewController.swift in Sources */,
 				9795175F222E78A800916FB2 /* AppDelegate.swift in Sources */,
@@ -438,6 +462,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJW5SEM824;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +484,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJW5SEM824;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
